@@ -19,12 +19,12 @@
       
         <div class="ml-auto">
             <a href="">
-                <i class="fa fa-pause text-white" style="font-size: 25px;", aria-hidden="true"></i>
+                <i id="stoped" class="fa fa-pause text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
 
             <a href="">
-                <i class="fa fa-pause text-white" style="font-size: 25px;", aria-hidden="true"></i>
+                <i id="play" class="fa fa-pause text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
 
@@ -35,36 +35,101 @@
     </nav>
 
     <div class="container">
-        <div class="row d-flex justify-content-center">
+
+        <div class="row d-flex justify-content-center mt-5 mb-5">
+
             <div class="col-md-8">
+
                 <div id="config" class="row d-flex justify-content-center">
                     <div class="col">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="action">Ação</label>
-                                    <input type="number" class="form-control" id="action" >
+                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="action">Ação</label>
+                                    <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="action" >
+                                    <small class="text-danger" id="error_action"></small>
                                 </div>
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="stop">Pausa</label>
-                                    <input type="number" class="form-control" id="stop" >
+                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="stop">Pausa</label>
+                                    <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="stop" >
+                                    <small class="text-danger" id="error_action"></small>
+
                                 </div>
                             </div>
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="section">Sessão</label>
-                                    <input type="number" class="form-control" id="section" >
+                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="section">Sessão</label>
+                                    <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="section" >
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Button -->
+
+                        <div class="row-mt-5 mb05 d-flex justify-content-center">
+                            <div class="col-md-9">
+                                <button onclick="start()" class="btn btn-danger shadow  btn-lg btn-block">
+                                    Start
+                                </button>
+
+                            </div>
+                        </div>
+                        
+                        <!-- Button -->
+
                     </div>
                 </div>
             </div>
         </div>
+        <!-- /config -->
+
+        <!-- Timer -->
+
+        <di id="timer" class="mt-0 d-flex justify-content-center">
+            <div class="row mb-3">
+                <div class="col">
+                    <h3 id="title" class="text-center"></h3>
+                </div>
+            </div>
+
+            <div class="row shadow time">
+                <div class="col-5 p-0">
+                    <h2 id="minutes_ok"></h2>
+
+                </div>
+                 <div class="col-1 p-0 d-flex justify-content-center">
+                    <h2>:</h2>
+                 </div>
+
+                <div class="col-5 pl-0">
+                    <h2 id="seconds_ok"></h2>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <h3 id="title_section" class="text-center text-secondary"></h3>
+                </div>
+            </div>
+        </di>
+        <!-- /timer -->
+
+        <!-- Finalização -->
+        <div id="end" style="display: none;">
+            <h1 class="text-sucess text-center">Congratulations! You ended your tasks! </h1>
+
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-9 d-flex justify-content-center">
+                    <a href="./index.html" class="btn btn-danger shadow btn-lg">Start</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Finalização -->
     </div>
 
 
