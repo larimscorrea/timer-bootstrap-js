@@ -11,6 +11,8 @@ var lofi = document.getElementById('lofi')
 var stoped = document.getElementById('stoped')
 var play = document.getElementById('play')
 
+
+
 function start() {
     if(action.value == 0) {
         document.getElementById('error_action').innerHTML = 'Add the minutes'
@@ -24,5 +26,13 @@ function start() {
     } else {
         lofi.play()
         stop.style.setProperty('display', 'block', 'important')
+
+        localStorage.setItem('action', String(action.value))
+        localStorage.setItem('stop', String(stop.value))
+        localStorage.setItem('section', String(section.value))
+
+        document.getElementById('timer').style.setProperty('config', 'block', 'important')
+        document.getElementById('timer').style.setProperty('display', 'block', 'important')
+
     }
 }
