@@ -34,6 +34,7 @@ function start() {
         document.getElementById('config').style.setProperty('config', 'none', 'important')
         document.getElementById('timer').style.setProperty('display', 'block', 'important')
 
+        momentAction()
     }
 }
 

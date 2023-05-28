@@ -18,12 +18,12 @@
         
       
         <div class="ml-auto">
-            <a href="">
+            <a onclick="stop()">
                 <i id="stoped" class="fa fa-pause text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
 
-            <a href="">
+            <a onclick="execute()">
                 <i id="play" class="fa fa-pause text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
@@ -41,9 +41,11 @@
             <div class="col-md-8">
 
                 <div id="config" class="row d-flex justify-content-center">
+                    
                     <div class="col">
-                        <div class="row">
-                            <div class="col-md-3">
+<!-- Inputs -->
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white font-weight-bold" for="action">Ação</label>
                                     <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="action" >
@@ -51,19 +53,21 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white font-weight-bold" for="stop">Pausa</label>
                                     <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="stop" >
-                                    <small class="text-danger" id="error_action"></small>
+                                    <small class="text-danger" id="stop_action"></small>
 
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
                                     <label class="d-flex justify-content-center text-white font-weight-bold" for="section">Sessão</label>
                                     <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="section" >
+                                    <small class="text-danger" id="section_action"></small>
+
                                 </div>
                             </div>
                         </div>
@@ -95,7 +99,7 @@
                     <h3 id="title" class="text-center"></h3>
                 </div>
             </div>
-
+        <!-- Relógio -->
             <div class="row shadow time">
                 <div class="col-5 p-0">
                     <h2 id="minutes_ok"></h2>
@@ -110,8 +114,10 @@
                 </div>
 
             </div>
+        <!-- Relógio -->
 
-            <div class="row mb-3">
+
+            <div class="row mt-5">
                 <div class="col">
                     <h3 id="title_section" class="text-center text-secondary"></h3>
                 </div>
