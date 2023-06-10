@@ -1,7 +1,7 @@
 let action = document.getElementById('action')
 let stop = document.getElementById('stop')
 let sections = document.getElementById('section')
-let seconds
+let seconds;
 
 var bell = new Audio("./audio/bell.mp3")
 var back = new Audio("./audio/back-mp3")
@@ -11,7 +11,18 @@ var lofi = document.getElementById('lofi')
 var stoped = document.getElementById('stoped')
 var play = document.getElementById('play')
 
+function stop() {
+    lofi.pause()
+    play.style.setProperty('display', 'block', 'important')
+    stop.style.setProperty('display', 'none', 'important')
 
+}
+
+function execute() {
+    lofi.play()
+    play.style.setProperty('display', 'none', 'important')
+    stop.style.setProperty('display', 'block', 'important')
+}
 
 function start() {
     if(action.value == 0) {
@@ -29,7 +40,7 @@ function start() {
 
         localStorage.setItem('action', String(action.value))
         localStorage.setItem('stop', String(stop.value))
-        localStorage.setItem('section', String(section.value))
+        localStorage.setItem('section', String(sections.value))
 
         document.getElementById('config').style.setProperty('config', 'none', 'important')
         document.getElementById('timer').style.setProperty('display', 'block', 'important')
