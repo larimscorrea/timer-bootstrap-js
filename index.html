@@ -22,14 +22,18 @@
                 <i id="stoped" class="fa fa-pause text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
+            
+            <audio src="stop.mp3" type="audio/mpeg">
+                <img src="pausa.png" alt="" srcset="">
+            </audio>
 
             <a onclick="execute()">
-                <i id="play" class="fa fa-pause text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
+                <i id="play" class="fa fa-play text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
 
-            <audio src="" type="audio/mpeg">
-
+            <audio src="play.mp3" type="audio/mpeg">
+                <img src="botao-play-ponta-de-seta.png" alt="" srcset="">
             </audio>
         </div>
     </nav>
@@ -93,12 +97,14 @@
 
         <!-- Timer -->
 
-        <di id="timer" class="mt-0 d-flex justify-content-center">
+        <div id="timer" class="mt-0 d-flex justify-content-center">
             <div class="row mb-3">
                 <div class="col">
                     <h3 id="title" class="text-center"></h3>
                 </div>
             </div>
+
+        </div>
         <!-- Relógio -->
             <div class="row shadow time">
                 <div class="col-5 p-0">
