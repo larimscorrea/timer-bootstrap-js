@@ -18,7 +18,7 @@
         
       
         <div class="ml-auto">
-            <a onclick="stop()">
+            <a onclick="watchStop()">
                 <i id="stoped" class="fa fa-pause text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
@@ -27,7 +27,7 @@
                 <img src="pausa.png" alt="" srcset="">
             </audio>
 
-            <a onclick="execute()">
+            <a onclick="watchStart()">
                 <i id="play" class="fa fa-play text-white" style="font-size: 25px; display: none;", aria-hidden="true"></i>
 
             </a>
@@ -51,7 +51,7 @@
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
-                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="action">Ação</label>
+                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="action">Horas</label>
                                     <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="action" >
                                     <small class="text-danger" id="error_action"></small>
                                 </div>
@@ -59,7 +59,7 @@
 
                             <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
-                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="stop">Pausa</label>
+                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="stop">Minutos</label>
                                     <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="stop" >
                                     <small class="text-danger" id="stop_action"></small>
 
@@ -68,7 +68,7 @@
 
                             <div class="col-md-3 d-flex justify-content-center">
                                 <div class="form-group">
-                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="section">Sessão</label>
+                                    <label class="d-flex justify-content-center text-white font-weight-bold" for="section">Segundos</label>
                                     <input type="number" class="form-control form-control-lg bg-danger border-0 shadow text-white" id="section" >
                                     <small class="text-danger" id="section_action"></small>
 
@@ -79,10 +79,15 @@
                         <!-- Button -->
 
                         <div class="row-mt-5 mb05 d-flex justify-content-center">
-                            <div class="col-md-9">
-                                <button onclick="start()" class="btn btn-danger shadow  btn-lg btn-block">
+                            <div class="col-md-6">
+                                <button onclick="watchStart()" class="btn btn-danger shadow  btn-lg btn-block">
                                     Start
                                 </button>
+
+                                <button onclick="watchStop()" class="btn btn-danger shadow btn-lg btn-block">Stop</button>
+
+                                <button onclick="watchReset()" class="btn btn-danger shadow btn-lg btn-block">Reset</button>
+
 
                             </div>
                         </div>
